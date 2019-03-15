@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 Edit Country
+    form(method="post", action="/country/edit/" + country._id)
+        .form-group
+            label Id:
+            input.form-control(name="id", type="text", value=country.id)
+        .form-group
+            label Name:
+            input.form-control(name="name", type="text", value=country.name)
+        .form-group
+            label Description:
+            textarea.form-control(name="description")= country.description
+        br
+        input.btn.btn-primary(type="submit", value="Submit")

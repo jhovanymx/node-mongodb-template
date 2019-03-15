@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 Add Country
+    form(method="post", action="/country/add")
+        .form-group
+            label Id:
+            input.form-control(name="id", type="text")
+        .form-group
+            label Name:
+            input.form-control(name="name", type="text")
+        .form-group
+            label Description:
+            textarea.form-control(name="description")
+        br
+        input.btn.btn-primary(type="submit", value="Submit")

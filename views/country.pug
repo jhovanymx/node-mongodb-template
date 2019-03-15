@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= country.name
+    h4 Abbr: #{country.id}
+    h5 Description: #{country.description}
+    hr
+    if user
+        a.btn.btn-primary(href="/country/edit/" + country._id) Edit
+        a.btn.btn-danger.delete-country(href="#", data-id=country._id) Delete
